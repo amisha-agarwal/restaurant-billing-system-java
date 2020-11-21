@@ -1,4 +1,6 @@
 //predefined java packages imported
+
+import java.io.*;
 import java.util.*;
 
 //Restaurant class inherits the properties of Menu class
@@ -13,13 +15,15 @@ public class Restaurant extends Menu
         System.out.println("\t\t** Restaurant Bill System ** ");
         System.out.println("\t-------------------------------------");
     }
+
+
     public void bill_generate(int amt,int qty)
     {
         amt = amt*qty;
     }
 
     //driver class defined
-    public static void main(String [] args)
+    public static void main(String [] args) throws IOException
     {
         //object of scanner class created to reads input from user
         Scanner sc = new Scanner(System.in);
@@ -100,15 +104,27 @@ public class Restaurant extends Menu
             //character read from user
             s = sc.next().charAt(0);
         }
-        System.out.println("\t-----------------------------");
-        System.out.println("\t\t*** Generated Bill ***");
-        System.out.println("\t-----------------------------");
-        System.out.println("\t\tTotal Item = "+count);
-        System.out.println("\t\tAmount to be payed = "+payment);
+
+        FileWriter writer = new FileWriter("Bill.txt");
+        BufferedWriter buffer = new BufferedWriter(writer);
+        buffer.write("\t-----------------------------\n");
+        buffer.write("\t*** Generated Bill ***\n");
+        buffer.write("\t-----------------------------\n");
+        buffer.write("\t\tTotal Item = "+count);
+        buffer.write("\n\t\tAmount to be payed = "+payment);
+
+        System.out.println("Your Bill has been generated in file ");
+        System.out.println("Total Amount = "+payment);
+        //System.out.println("-----------------------------");
+        //System.out.println("\t\t*** Generated Bill ***");
+        //System.out.println("\t-----------------------------");
+        //System.out.println("\t\tTotal Item = "+count);
+        //System.out.println("\t\tAmount to be payed = "+payment);
         //finalize method called to dispose off all the objects created
         obj1.finalize();
+        buffer.close();
     }
-    //finaloze method overridden to dispose of all the objects
+    //finalize method overridden to dispose of all the objects
     protected void finalize()
     {
         System.out.println("\t\t**THANK YOU**\t\t **VISIT AGAIN**");

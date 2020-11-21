@@ -11,6 +11,5 @@ Features ->
 
 Objective -> The main objective of project is to implement the maximun possible concept of Object Oriented Programming(OOP's).
 
-
-All types of ideas and suggestions are welcome at amishaagrawal98@gmail.com 
+ 
   
