@@ -6,10 +6,11 @@ Language used -> JAVA
 Features ->
 
     1.Display menu items
-    
     2.Read choice from user
-    
     3.Calculates the total bill
 
 Objective -> The main objective of project is to implement the maximun possible concept of Object Oriented Programming(OOP's).
+
+
+All types of ideas and suggestions are welcome at amishaagrawal98@gmail.com 
   
