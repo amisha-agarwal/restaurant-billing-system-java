@@ -1,5 +1,6 @@
 # restaurant-billing-system-java
 Project Name -> Restaurant Billing System
+
 Language used -> JAVA core
 Features ->
 
@@ -10,7 +11,7 @@ Features ->
 Objective -> The main objective of project is to implement the maximun possible concept of
              Object Oriented Programming(OOP's).
 
-Steps to run the project ->
+Steps to run the code ->
 
 1. Install java in your system & set path .
 2. Open file directory in which your project file is saved in command prompt.
