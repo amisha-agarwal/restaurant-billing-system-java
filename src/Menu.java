@@ -1,4 +1,3 @@
-
 //interface concept applied
 interface I1
 {

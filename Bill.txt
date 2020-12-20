@@ -1,5 +1,5 @@
 	-----------------------------
 	*** Generated Bill ***
 	-----------------------------
-		Total Item = 2
-		Amount to be payed = 300
+		Total Item = 5
+		Amount to be payed = 750

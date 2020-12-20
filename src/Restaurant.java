@@ -1,5 +1,4 @@
 //predefined java packages imported
-
 import java.io.*;
 import java.util.*;
 
@@ -7,7 +6,7 @@ import java.util.*;
 //inheritance concept applied
 public class Restaurant extends Menu
 {
-    // default constructor of class defined
+    //default constructor of class defined
     //constructors are called automatically when objects are created
     Restaurant()
     {
@@ -15,7 +14,6 @@ public class Restaurant extends Menu
         System.out.println("\t\t** Restaurant Bill System ** ");
         System.out.println("\t-------------------------------------");
     }
-
 
     public void bill_generate(int amt,int qty)
     {
@@ -80,15 +78,8 @@ public class Restaurant extends Menu
                 }
                 // Pav Bhaji = Rs.180/-
                 case 5:
-                {
-                    amt = 180;
-                    payment = payment+(amt*qty);
-                    count = count + qty;
-                    break;
-                }
-                // Fried Idli = Rs.180/-
-                case 6:
-                {
+                    // Fried Idli = Rs.180/-
+                case 6: {
                     amt = 180;
                     payment = payment+(amt*qty);
                     count = count + qty;
@@ -105,8 +96,11 @@ public class Restaurant extends Menu
             s = sc.next().charAt(0);
         }
 
+        /*file writer object created and file named "Bill.txt"  */
         FileWriter writer = new FileWriter("Bill.txt");
+        /*buffer writer object created */
         BufferedWriter buffer = new BufferedWriter(writer);
+        /*Now data is being written using buffer into the file */
         buffer.write("\t-----------------------------\n");
         buffer.write("\t*** Generated Bill ***\n");
         buffer.write("\t-----------------------------\n");
@@ -115,11 +109,15 @@ public class Restaurant extends Menu
 
         System.out.println("Your Bill has been generated in file ");
         System.out.println("Total Amount = "+payment);
-        //System.out.println("-----------------------------");
-        //System.out.println("\t\t*** Generated Bill ***");
-        //System.out.println("\t-----------------------------");
-        //System.out.println("\t\tTotal Item = "+count);
-        //System.out.println("\t\tAmount to be payed = "+payment);
+
+        /*
+            System.out.println("-----------------------------");
+            System.out.println("\t\t*** Generated Bill ***");
+            System.out.println("\t-----------------------------");
+            System.out.println("\t\tTotal Item = "+count);
+            System.out.println("\t\tAmount to be payed = "+payment);
+        */
+
         //finalize method called to dispose off all the objects created
         obj1.finalize();
         buffer.close();
